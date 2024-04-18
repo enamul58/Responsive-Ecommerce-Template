@@ -1,0 +1,368 @@
+/* global */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #fd8eaf;
+  --white-color: #fff;
+  --text-color: #9e9999;
+  --black-color: #000;
+}
+
+/* Custom Scrollbar  */
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+/* Navbar */
+.navigation-wrap {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  border: unset;
+  box-shadow: none;
+}
+
+.main-btn {
+  width: 150px;
+  height: 50px;
+  border: 0.063rem solid var(--primary-color);
+  color: var(--black-color);
+  font-size: 1.125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.main-btn::before,
+.main-btn::after {
+  position: absolute;
+  background: var(--white-color);
+  z-index: -1;
+  transition: 0.3s;
+  content: "";
+}
+
+.main-btn::before {
+  height: 3.125rem;
+  width: 8.125rem;
+}
+
+.main-btn::after {
+  width: 9.375rem;
+  height: 1.875rem;
+}
+
+.main-btn:hover::before {
+  width: 0px;
+  background: var(--white-color);
+}
+
+.main-btn:hover::after {
+  height: 0px;
+  background: var(--white-color);
+}
+
+.main-btn:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.navigation-wrap.scoll-on {
+  position: fixed;
+  background-color: var(--black-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+
+.navigation-wrap.scoll-on .nav-link:hover,
+.navigation-wrap.scoll-on .nav-link.active {
+  color: var(--primary-color);
+}
+
+.navigation-wrap.scoll-on .main-btn {
+  color: var(--primary-color);
+  margin: auto;
+}
+
+.navigation-wrap.scoll-on .main-btn::before,
+.navigation-wrap.scoll-on .main-btn::after {
+  background-color: var(--black-color);
+}
+
+.nav-item {
+  padding: 8px 15px;
+}
+
+.nav-item .nav-link {
+  color: var(--white-color);
+}
+
+/* Hero Section  */
+.carousel-caption {
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 1320px;
+}
+
+.carousel-caption h2::before {
+  background-color: #fd8eaf;
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0%;
+  width: 30px;
+  height: 5px;
+}
+
+.carousel-caption h2 {
+  font-size: 35px;
+  font-weight: 700;
+  padding-top: 25px;
+}
+
+.carousel-caption h1 {
+  padding-top: 10px;
+  font-size: 84px;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.carousel-caption h1 span {
+  color: var(--white-color);
+}
+
+/* about section  */
+#about-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: relative;
+  bottom: -45px;
+  background-color: var(--primary-color);
+}
+
+#about-section .carousel-inner {
+  border-bottom-right-radius: 100px;
+}
+
+.about_info h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#about-section .about_info h2:before,
+#feature-section h2:before,
+#headphone-section h2:before,
+.headphone-info-title h2::before {
+  background-color: var(--primary-color);
+  content: "";
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about_info p {
+  color: #9e9999;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.about_info .main-btn {
+  z-index: 500;
+}
+
+/* Features Sections Start*/
+
+.img_coustomize img {
+  opacity: 0.75;
+  filter: brightness(0);
+  padding: 20px 16px;
+  box-shadow: 0.0625rem 0.25rem 1.25rem rgba(26, 26, 26, 0.178);
+  border-top-right-radius: 32px;
+}
+
+.img_coustomize:hover img {
+  filter: brightness(1);
+}
+
+.img_coustomize h3 {
+  color: #000;
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.img_coustomize p,
+.image_caption p {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.img_coustomize:hover h3 {
+  color: var(--primary-color);
+}
+
+/* headphone info  */
+#headphone-section h2:before {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#headphone-section h2 {
+  color: var(--black-color);
+}
+
+#headphone-section p {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+#headphone-section .img-box h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--black-color);
+}
+
+#headphone-section .img-box h4:hover {
+  color: var(--primary-color);
+}
+
+img {
+  transition: all 0.3s linear;
+}
+
+#headphone-section .img-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+}
+
+#headphone-section .img-box i {
+  color: var(--text-color);
+  margin-top: 15px;
+}
+
+/* headphone-info  */
+.headphone-info-title h2 {
+  color: var(--black-color);
+}
+
+.headphone-info-title p {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+/* subscribe form  */
+form .form-group,
+form input[type="text"] {
+  box-shadow: 0.0625rem 0.375rem 0.625rem 0.1875rem rgb(26 26 26 / 7%);
+  display: inline-block;
+  margin: 0 0.9375rem;
+  border-radius: 1.875rem;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  display: inline-block;
+  padding: 0 1.5625rem;
+  height: 3.375rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  border-radius: 1.875rem;
+  outline: none;
+}
+
+form input[type="text"],
+form input[type="email"],
+form .form-group {
+  background-color: var(--white-color);
+  color: var(--text-color);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.7);
+}
+
+.send_button {
+  width: auto;
+  padding-left: 25px;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  margin-right: 5px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.send_button i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  line-height: 30px;
+  /* text-align: center; */
+  display: inline-block;
+}
+
+.ctm_margin {
+  display: inline-block;
+  text-align: right;
+}
+
+#footer {
+  background-color: var(--black-color);
+  color: var(--text-color);
+}
+
+.links i {
+  color: var(--white-color);
+  margin-right: 25px;
+  font-size: 26px;
+  display: inline-block;
+}
+
+.links_title {
+  font-size: 14px;
+}
+
+.links a:first-child {
+  margin-left: 10px;
+}
